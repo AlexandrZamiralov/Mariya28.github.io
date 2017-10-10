@@ -89,6 +89,7 @@ window.onload = function () {
 
     buttonAdd = document.getElementById("button_add");
     buttonAdd.addEventListener("click", function (event) {
+        if (inputNodeValue.isNumeric){
         var nodeValue = inputNodeValue.value;
         nodeList.push(nodeValue); // Добавление в очередь
 
@@ -97,6 +98,7 @@ window.onload = function () {
         cell.innerHTML = nodeValue.toString();
 
         inputNodeValue.value = "";
+        }
     });
 
     function getSpeed() {
